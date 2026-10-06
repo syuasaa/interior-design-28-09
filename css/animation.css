@@ -1,0 +1,131 @@
+/* header animation */
+
+.head > h2 span {
+  display: inline-block;
+  animation: wave 1s ease-in-out;
+}
+
+.head > h2 span:nth-child(1) {
+  animation-delay: 0s;
+}
+.head > h2 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.head > h2 span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.head > h2 span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* hero animation finish */
+
+/* hero animation */
+
+.hero-content-text {
+  transform: translateX(-100%);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hero-content-btn {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideInBtn 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideInBtn {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-img > img {
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInImg 1s ease-in-out forwards;
+}
+
+@keyframes slideInImg {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* projects scroll animation */
+.projects-items > article {
+  opacity: 0;
+  transform: translateY(50px);
+
+  animation: fadeInUp linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  projects scroll animation */
+
+/* about animation */
+
+.story-images img {
+  transform: scale(0.8);
+  opacity: 0;
+  animation: scaleUp 2s linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.story-content {
+  transform: translateY(-60px);
+  opacity: 0;
+  filter: blur(6px);
+
+  animation: storySlide linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+@keyframes storySlide {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}

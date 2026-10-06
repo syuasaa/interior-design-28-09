@@ -1,0 +1,71 @@
+button {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 14px 28px;
+  background-color: #2a2725;
+  color: #fff;
+
+  border-radius: 100px;
+  border: 2px solid #2a2725;
+
+  transition: 0.3s linear;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #c9b79c, #8f7a5a);
+  color: #fff;
+  border: 2px solid #8f7a5a;
+  box-shadow: 1px 1px 25px #edd3ad;
+}
+
+.btn2 {
+  padding: 14px 28px;
+  background-color: #fff;
+  color: #2a2725;
+  border-radius: 100px;
+  border: 2px solid #2a2725;
+  transition: 0.3s linear;
+}
+
+.btn2:hover {
+  background-color: #2a2725;
+  color: #fff;
+  border: 2px solid #2a2725;
+}
+
+.btn-bow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  font-weight: 600;
+  background: none;
+  position: relative;
+}
+
+.btn-bow::after {
+  content: " ";
+  width: 10px;
+  right: -15px;
+  top: 8px;
+  position: absolute;
+  border: 1px solid;
+}
+
+.btn-bow::before {
+  content: " ";
+  width: 5px;
+  height: 5px;
+  right: -15px;
+  top: 5.5px;
+  transform: rotate(45deg);
+  position: absolute;
+  border-top: 2px solid;
+  border-right: 2px solid;
+}
+
+.btn-bow:hover{
+  color: gray;
+}
